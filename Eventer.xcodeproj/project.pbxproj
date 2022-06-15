@@ -23,7 +23,13 @@
 		49B0EF4A285A83AC008113CA /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49B0EF49285A83AC008113CA /* GoogleSignInSwift */; };
 		49B0EF4D285A8476008113CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF4C285A8476008113CA /* HomeView.swift */; };
 		49B0EF4F285A8540008113CA /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF4E285A8540008113CA /* LocationView.swift */; };
-		49B0EF51285A8786008113CA /* Registry & Login in Resources */ = {isa = PBXBuildFile; fileRef = 49B0EF50285A8785008113CA /* Registry & Login */; };
+		49B0EF59285A8CF1008113CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF58285A8CF1008113CA /* User.swift */; };
+		49B0EF5B285A8D1F008113CA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF5A285A8D1F008113CA /* ViewModel.swift */; };
+		49B0EF5D285A8D53008113CA /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF5C285A8D53008113CA /* AuthenticationViewModel.swift */; };
+		49B0EF61285A8DC5008113CA /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF60285A8DC5008113CA /* GoogleSignInButton.swift */; };
+		49B0EF63285A8DED008113CA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF62285A8DED008113CA /* LoginView.swift */; };
+		49B0EF65285A8E0E008113CA /* PendingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF64285A8E0E008113CA /* PendingScreen.swift */; };
+		49B0EF67285A8E31008113CA /* Registry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B0EF66285A8E31008113CA /* Registry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +41,14 @@
 		49B0EF35285A7DBB008113CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49B0EF4C285A8476008113CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		49B0EF4E285A8540008113CA /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
-		49B0EF50285A8785008113CA /* Registry & Login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Registry & Login"; sourceTree = "<group>"; };
+		49B0EF58285A8CF1008113CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		49B0EF5A285A8D1F008113CA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		49B0EF5C285A8D53008113CA /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		49B0EF60285A8DC5008113CA /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		49B0EF62285A8DED008113CA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		49B0EF64285A8E0E008113CA /* PendingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingScreen.swift; sourceTree = "<group>"; };
+		49B0EF66285A8E31008113CA /* Registry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registry.swift; sourceTree = "<group>"; };
+		49B0EF68285A91B1008113CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +90,10 @@
 		49B0EF26285A7D2F008113CA /* Eventer */ = {
 			isa = PBXGroup;
 			children = (
-				49B0EF50285A8785008113CA /* Registry & Login */,
+				49B0EF54285A8BA1008113CA /* Registry & Login */,
 				49B0EF4B285A8419008113CA /* App */,
 				49B0EF35285A7DBB008113CA /* GoogleService-Info.plist */,
+				49B0EF68285A91B1008113CA /* Info.plist */,
 				49B0EF2B285A7D31008113CA /* Assets.xcassets */,
 				49B0EF27285A7D2F008113CA /* EventerApp.swift */,
 				49B0EF29285A7D2F008113CA /* ContentView.swift */,
@@ -103,6 +117,44 @@
 				49B0EF4E285A8540008113CA /* LocationView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		49B0EF54285A8BA1008113CA /* Registry & Login */ = {
+			isa = PBXGroup;
+			children = (
+				49B0EF57285A8C95008113CA /* Firestore_Tools */,
+				49B0EF56285A8C89008113CA /* Screens */,
+				49B0EF55285A8C6B008113CA /* Auth_Tools */,
+			);
+			path = "Registry & Login";
+			sourceTree = "<group>";
+		};
+		49B0EF55285A8C6B008113CA /* Auth_Tools */ = {
+			isa = PBXGroup;
+			children = (
+				49B0EF5C285A8D53008113CA /* AuthenticationViewModel.swift */,
+				49B0EF60285A8DC5008113CA /* GoogleSignInButton.swift */,
+			);
+			path = Auth_Tools;
+			sourceTree = "<group>";
+		};
+		49B0EF56285A8C89008113CA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				49B0EF62285A8DED008113CA /* LoginView.swift */,
+				49B0EF64285A8E0E008113CA /* PendingScreen.swift */,
+				49B0EF66285A8E31008113CA /* Registry.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		49B0EF57285A8C95008113CA /* Firestore_Tools */ = {
+			isa = PBXGroup;
+			children = (
+				49B0EF58285A8CF1008113CA /* User.swift */,
+				49B0EF5A285A8D1F008113CA /* ViewModel.swift */,
+			);
+			path = Firestore_Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +230,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B0EF51285A8786008113CA /* Registry & Login in Resources */,
 				49B0EF2F285A7D31008113CA /* Preview Assets.xcassets in Resources */,
 				49B0EF2C285A7D31008113CA /* Assets.xcassets in Resources */,
 				49B0EF36285A7DBB008113CA /* GoogleService-Info.plist in Resources */,
@@ -194,7 +245,14 @@
 			files = (
 				49B0EF4D285A8476008113CA /* HomeView.swift in Sources */,
 				49B0EF4F285A8540008113CA /* LocationView.swift in Sources */,
+				49B0EF5D285A8D53008113CA /* AuthenticationViewModel.swift in Sources */,
+				49B0EF67285A8E31008113CA /* Registry.swift in Sources */,
+				49B0EF63285A8DED008113CA /* LoginView.swift in Sources */,
 				49B0EF2A285A7D2F008113CA /* ContentView.swift in Sources */,
+				49B0EF61285A8DC5008113CA /* GoogleSignInButton.swift in Sources */,
+				49B0EF59285A8CF1008113CA /* User.swift in Sources */,
+				49B0EF65285A8E0E008113CA /* PendingScreen.swift in Sources */,
+				49B0EF5B285A8D1F008113CA /* ViewModel.swift in Sources */,
 				49B0EF28285A7D2F008113CA /* EventerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +385,7 @@
 				DEVELOPMENT_TEAM = 8D9HCVSSMT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Eventer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -356,6 +415,7 @@
 				DEVELOPMENT_TEAM = 8D9HCVSSMT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Eventer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

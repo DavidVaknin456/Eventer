@@ -18,3 +18,9 @@ struct EventerApp: App {
         }
       }
 }
+
+extension EventerApp {
+  private func setupAuthentication() {
+    FirebaseApp.configure()
+  }
+}
