@@ -1,17 +1,26 @@
-//
-//  EventerApp.swift
-//  Eventer
-//
-//  Created by David Vaknin on 15/06/2022.
-//
-
 import SwiftUI
+import Firebase
+import GoogleSignIn
 
 @main
 struct EventerApp: App {
-    var body: some Scene {
+    @StateObject var viewModel = AuthenticationViewModel()
+
+    
+    init() {
+        setupAuthentication()
+      }
+
+      var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
-    }
+      }
+}
+
+extension EventerApp {
+  private func setupAuthentication() {
+    FirebaseApp.configure()
+  }
 }
